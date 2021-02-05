@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <h1>Setup a new Project</h1>
+    <br/>
+    <div class="row">
+        <div class="container">
+            <big>
+                <div class="row">
+                    <div class="col-md-2">
+                        Name of the project:
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" id="project_name"/>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-2">
+                        Select the Dataset:
+                    </div>
+                    <div class="col-md-6">
+                        <select id="dataset_selection" class="btn btn-default dropdown-toggle" style="text-align: left;">
+                            {% for element in datasets %}
+                            <option value="{{ element.id }}">{{ element.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </big>
+        </div>
+    </div>
+    <button type="button" class="btn btn-default btn-sm" onclick="setup_project()">
+        <span class="glyphicon glyphicon-plus"></span> Setup Project
+    </button>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+
+    function setup_project() {
+        let project_name = document.getElementById("project_name").value;
+        let dataset_id = document.getElementById("dataset_selection").value;
+
+        $.ajax({
+            type: "POST",
+            url: "{{ url_for('api_create_new_project') }}",
+            data: {
+                dataset: dataset_id,
+                name: project_name
+            },
+            cache: false,
+            success: function (data) {
+                if(data.success) {
+                    window.location = data.url_to_project;
+                }
+                else{
+                    alert('an error occurred');
+                }
+            }
+        });
+
+    }
+
+</script>
+{% endblock %}

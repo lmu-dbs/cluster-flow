@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <h1>Upload Dataset</h1>
+    <div class="row">
+        <big>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        Name of the dataset:
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" id="project_name"/>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-4">
+                        Select dataset as '.csv' [separator has to be ',']:
+                    </div>
+                    <div class="col-md-6">
+                        <input type="file" id="uploadFile">
+                    </div>
+                </div>
+            </div>
+        </big>
+    </div>
+    <button type="button" class="btn btn-default btn-sm" onclick="create_dataset()">
+        <span class="glyphicon glyphicon-plus"></span> upload dataset
+    </button>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+
+    function create_dataset() {
+        //console.log(document.getElementById("uploadFile").files[0]);
+        //return;
+
+        var data = new FormData();
+        data.append('dataset', document.getElementById("uploadFile").files[0]);
+        data.append('name', document.getElementById("project_name").value);
+        $.ajax({
+            url: "{{ url_for('api_upload_dataset') }}",
+            data: data,
+            type: 'POST',
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                if(data.success) {
+                    window.location = data.url_redirect;
+                }
+                else{
+                    alert('an error occurred');
+                }
+            }
+        });
+    }
+
+</script>
+{% endblock %}

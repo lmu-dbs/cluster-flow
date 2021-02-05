@@ -1,0 +1,288 @@
+
+footer {
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  width: 100%;
+  height: 28px;
+  background-color: linen;
+}
+
+body {
+    min-height: 100%;
+    background-color: linen;
+}
+
+.addFilterButton {
+    text-align: right;
+}
+
+.user_answer{
+    background-color: lightblue;
+}
+
+.model_left{
+    color: red;
+}
+
+.model_right{
+    color: blue;
+}
+
+.border-right {
+    border-right: 1px solid black;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.border{
+    border: 1px solid green;
+}
+
+.item{
+    font-size: 16px;
+}
+
+
+th{
+    padding-right: 15px;
+}
+th, td{
+    padding-top: 3px;
+}
+
+.plot{
+    align-self: center;
+    width:32vw;
+    height:24vw;
+}
+
+.loading_image {
+    width: 192px;
+    height: 192px;
+    alignment: center;
+    margin-left: 230px;
+    margin-top: 100px;
+    margin-bottom: 160px;
+}
+
+.card_plot {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: auto;
+    padding-right: auto;
+    content: 'center';
+    border-right: 5px solid black;
+}
+
+.card_plot_legend {
+    padding-top: 50px;
+}
+
+h2{
+    text-align: right;
+}
+
+.my_dropdown_box{
+    text-align: left;
+}
+
+.card_ready{
+     border: 4px solid green;
+}
+
+.card_running{
+     border: 4px solid orange;
+}
+
+.card_waiting{
+     border: 4px solid red;
+}
+
+.card_no_status{
+     border: 4px solid black;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.legend_control_buttons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.legend_control_buttons_to_right {
+    float: right;
+}
+
+.legend_control_buttons_to_right > * {
+    margin-left: 5px;
+}
+
+.full_height{
+    height: 100%;
+}
+
+input, select{
+    width: 100%;
+}
+
+.proejct_headline{
+    text-align: left;
+    margin-left: 20%;
+}
+
+.filter {
+    background-color: white;
+    border-radius: 20px;
+
+    alignment: center;
+
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+
+    white-space: nowrap;
+
+    width:60vw;
+    height:31vw;
+}
+
+.addFilter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width:60vw;
+    height:5vw;
+}
+
+.expression_single {
+    width: 60%;
+    alignment: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.expression_two {
+    background-color: white;
+    border-radius: 20px;
+    width: 80%;
+    alignment: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+
+    border: 4px solid black;
+}
+
+.scroll_area{
+    background-color: lightgrey;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    border: 2px solid black;
+}
+
+.filter_area{
+    display: inline-flex;
+}
+
+.center_card{
+    alignment: center;
+    margin: auto;
+}
+
+.spacer{
+    width: 10px;
+}
+
+.expression_operation_card{
+    margin-top: 20px;
+    width:60vw;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 20px;
+}
+
+.position_relative{
+    position: relative;
+}
+
+.container_new_filter_buttons {
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.container_new_filter_buttons > * {
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+.button_highlight_red{
+    border: 3px solid red;
+}
+
+.button_add_new_card{
+    width: 25vw;
+    height: 3vw;
+    font-size: 1.8em;
+    border: 4px solid green;
+}
+
+.tooltipXX{
+    word-wrap: break-word;
+    white-space: normal;
+    width: 23vw;
+}

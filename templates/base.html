@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Cluster-Flow</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+        <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+        {% block extra_css %}
+        {% endblock %}
+    </head>
+
+    <body>
+        <br/>
+        <div class="container">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ url_for('view_project_overview') }}">Projects</a></li>
+                        <li><a href="{{ url_for('view_datasets_overview') }}">Datasets</a></li>
+                        <li><a href="{{ url_for('upload_dataset') }}">Upload Dataset</a></li>
+                        <li><a href="{{ url_for('new_project') }}">New Project</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        {% block content %}
+        {% endblock %}
+
+
+
+        <script type="text/javascript" src="{{ url_for('static', filename='js/extern/jquery.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/extern/bootstrap.bundle.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+        <script type="text/javascript" src="/static/js/filter_cards/filter.js"></script>
+        <script type="text/javascript" src="/static/js/filter_cards/expression.js"></script>
+
+        <script type="text/javascript" src="/static/js/filter_cards/preclustering_rock.js"></script>
+
+        <script type="text/javascript" src="{{ url_for('static', filename='js/other_cards/dataset_info_card.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/other_cards/add_filter_card.js') }}"></script>
+
+        <script type="text/javascript" src="{{ url_for('static', filename='js/filter_cards/knn_graph_generation.js') }}"></script>
+
+
+        {% block extra_js %}
+        {% endblock %}
+    </body>
+</html>

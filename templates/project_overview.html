@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h1>Projects</h1>
+
+    <div class="row" style="margin-top:0%;">
+        <div class="col-lg-12">
+            <big>
+            <table width="90%;">
+                <tr>
+                    <th>
+                        <b>ID</b>
+                    </th>
+                    <th>
+                        <b>Name</b>
+                    </th>
+                    <th>
+                        <b>Dataset</b>
+                    </th>
+                </tr>
+                {% for element in projects %}
+                    <tr>
+                        <td>
+                            <a href="/project/{{ element.id }}">{{ element.id }}</a>
+                        </td>
+                        <td>
+                            <a href="/project/{{ element.id }}">{{ element.name }}</a>
+                        </td>
+                        <td>
+                            {{ element.dataset }}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+            </big>
+        </div>
+    </div>
+</div>
+{% endblock %}
