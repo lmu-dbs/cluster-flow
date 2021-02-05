@@ -1,6 +1,6 @@
 # Prototype of the Interactive Clustering Tool for the Cluster Flow Concept
 
-[![Python 3.7](https://img.shields.io/badge/Python-3.8-2d618c?logo=python)](https://docs.python.org/3.8/)
+[![Python 3.7](https://img.shields.io/badge/Python-3.7-2d618c?logo=python)](https://docs.python.org/3.7/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 This is the prototypical implementation of the concept proposed in the paper 
